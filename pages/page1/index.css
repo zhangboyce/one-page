@@ -1,0 +1,14 @@
+.page .page1 {
+    padding: 20px 30px;
+    text-align: center;
+}
+
+.page .page1 .title {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.page .page1 ul li span {
+    cursor: pointer;
+    font-weight: bold;
+}

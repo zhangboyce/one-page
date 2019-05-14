@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1080,user-scalable=no,target-densitydpi=device-dpi">
+    <title>Eternal Framework</title>
+    <script src="https://cdn.staticfile.org/nunjucks/3.0.1/nunjucks.min.js"></script>
+</head>
+<body>
+<div id="svg">
+
+</div>
+<script src="./radar.js"></script>
+<script>
+    window.nunjucks.configure('.', {
+        autoescape: true
+    });
+
+    var svgHtml = radar();
+    document.getElementById('svg').innerHTML = svgHtml;
+
+</script>

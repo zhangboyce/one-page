@@ -1,0 +1,14 @@
+{% extends "/layout/page.html" %}
+{% block content %}
+<div class="page1">
+    <div class="title">{{ title }}</div>
+    <input name="item" type="text" />
+    <input type="button" value="Add"/>
+    <ul>
+    {% for item in items%}
+        <li>{{ item.name }}   <span data-index="{{ loop.index0 }}">X</span></li>
+    {% endfor %}
+    </ul>
+    <a href="#page2">go to page2</a>
+</div>
+{% endblock %}

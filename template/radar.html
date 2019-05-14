@@ -1,0 +1,17 @@
+<svg viewBox="0, 0, 800, 800">
+    {% for path in paths %}
+    <path fill="none" stroke="{{ path.strokeColor }}" stroke-width="1" stroke-dasharray="{{ path.strokeDashArray }}" d="{{ path.d }}"></path>
+    {% endfor %}
+
+    {% for polygon in polygons %}
+        <polygon fill="{{ polygon.fillColor }}" stroke="{{ polygon.strokeColor }}" stroke-width="1" points="{{ polygon.points }}"></polygon>
+        {% for point in polygon._points %}
+            <circle cx="{{ point[0] }}"  cy="{{ point[1] }}" r="5" fill="{{ polygon.pointColor }}" ></circle>
+        {% endfor %}
+    {% endfor %}
+
+    {% for text in texts %}
+        <text x="{{ text.name_X }}" y="{{ text.name_Y }}" font-size="{{ text.name_fontSize }}">{{ text.name }}</text>
+        <text x="{{ text.desc_X }}" y="{{ text.desc_Y }}" font-size="{{ text.desc_fontSize }}">{{ text.desc }}</text>
+    {% endfor %}
+</svg>
